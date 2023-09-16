@@ -1,5 +1,11 @@
-GET http://localhost:3001/
+### get all tasks
+GET http://localhost:3001/api/tasks
 
-###
+### Create a new task
+POST http://localhost:3001/api/tasks
+Content-Type: application/json
 
-GET http://localhost:3001/api/notes
+{
+  "content": "Your content here",
+  "importance": "Your importance value here"
+}
