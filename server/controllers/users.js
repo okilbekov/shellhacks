@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 const usersRouter = require('express').Router();
-const User = require('./models/User');
+const User = require('../models/user');
 
 usersRouter.post('/register', async (request, response) => {
 	const { username, email, password } = request.body;
@@ -25,3 +25,5 @@ usersRouter.post('/register', async (request, response) => {
 		response.status(400).json({ error: error.message });
 	}
 });
+
+module.exports = usersRouter;
