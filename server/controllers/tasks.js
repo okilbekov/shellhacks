@@ -1,11 +1,33 @@
 const tasksRouter = require('express').Router();
 const Task = require('../models/task');
+const User = require('../models/user');
+const jwt = require('jsonwebtoken');
+const config = require('../utils/config');
+
+const getTokenFrom = request => {
+	const authorization = request.get('authorization')
+	if (authorization && authorization.startsWith('Bearer ')) {
+		return authorization.replace('Bearer ', '')
+	}
+	return null
+}
+
+const computeScore = (task) => {
+	const { deadline, duration, importance } = task;
+	return (deadline * duration) / importance;
+};
 
 tasksRouter.get('/', async (request, response) => {
-	const userId = request.user.id;
+	const token = getTokenFrom(request)
+	const decodedToken = jwt.verify(token, config.JWT_SECRET)
+
+	if (!decodedToken.id) {
+		return response.status(401).json({ error: 'token invalid' })
+	}
+	const user = await User.findById(decodedToken.id)
 
 	try {
-		const tasks = await Task.find({ user: userId });
+		const tasks = await Task.find({ user: user.id });
 		response.json(tasks);
 	} catch (error) {
 		response.status(500).json({ error: 'Failed to fetch tasks' });
@@ -53,12 +75,17 @@ tasksRouter.get('/:id', async (request, response) => {
 });
 
 tasksRouter.post('/', async (request, response) => {
-	const body = request.body;
+	const token = getTokenFrom(request)
+	const decodedToken = jwt.verify(token, config.JWT_SECRET)
 
-	const userId = request.user.id;
+	if (!decodedToken.id) {
+		return response.status(401).json({ error: 'token invalid' })
+	}
+
+
 
 	// Validate the required fields
-	if (!body.title || !body.deadline || !body.duration || !body.importance || !body.priorityScore) {
+	if (!body.title || !body.deadline || !body.duration || !body.importance) {
 		return response.status(400).json({ error: 'Required field missing' });
 	}
 
@@ -73,7 +100,7 @@ tasksRouter.post('/', async (request, response) => {
 		deadline: body.deadline,
 		duration: body.duration,
 		importance: body.importance,
-		priorityScore: body.priorityScore,
+		priorityScore: computeScore(body),
 		reorderedPriorityScore: body.reorderedPriorityScore || null,
 		completed: body.completed || false,
 		user: userId

@@ -17,7 +17,19 @@ Content-Type: application/json
   "password": "securepassword123"
 }
 
-### TODO: not working yet
 ### Get all tasks for the user
 GET http://localhost:3001/api/tasks
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gRG9lIiwiaWQiOiI2NTA1NTYzNjQ5N2NmMWE5ODU1ZmRkMTIiLCJpYXQiOjE2OTQ4NDg5MjQsImV4cCI6MTY5NDg1MjUyNH0.WbYCr2uSLotM0-xFPsmYYRLXhagSuU6etBTCKkXJlwc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gRG9lIiwiaWQiOiI2NTA1NTYzNjQ5N2NmMWE5ODU1ZmRkMTIiLCJpYXQiOjE2OTQ4NzE2MzAsImV4cCI6MTY5NDg3NTIzMH0.nZlHzxds-nx4FooQ2VsQLAtXGllKlJF6faeoIVmQnXQ
+
+### Create a new task
+POST http://localhost:3001/api/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gRG9lIiwiaWQiOiI2NTA1NTYzNjQ5N2NmMWE5ODU1ZmRkMTIiLCJpYXQiOjE2OTQ4NzE2MzAsImV4cCI6MTY5NDg3NTIzMH0.nZlHzxds-nx4FooQ2VsQLAtXGllKlJF6faeoIVmQnXQ
+
+{
+  "title": "Test Task",
+  "deadline": "2023-09-20",
+  "duration": 30,
+  "importance": 2,
+  "priorityScore": 10
+}

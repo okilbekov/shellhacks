@@ -7,7 +7,6 @@ loginRouter.post('/', async (request, response) => {
 	const { email, password } = request.body;
 
 	const user = await User.findOne({ email });
-	console.log(user);
 	if (!user || !(await user.checkPassword(password))) {
 		return response.status(401).json({ error: 'Invalid email or password' });
 	}
