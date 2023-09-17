@@ -1,8 +1,10 @@
 import TaskList from "./TaskList";
-import Sidebar from "./Sidebar";
 import TaskAdd from "./TaskAdd";
 import Calendar from "./Calendar";
 import TasksGreet from "./TaskGreet";
+import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import { FaBars } from 'react-icons/fa'; // Example icons
+import { useState } from "react";
 
 const tasks = [
     {
@@ -86,29 +88,51 @@ const dateNumber = dateObj.getDate();
 const dateMonth = dateObj.toLocaleString('en-US', { month: 'long' });
 
 const Dashboard = () => {
-	return (
-		<div className="container">
-			
-        <div>
-            <Sidebar/>
-        </div>
-           <div> 
-            <TasksGreet 
-            userName={userName} 
-            weekDay={weekDay} 
-            dateNumber={dateNumber} 
-            dateMonth={dateMonth}
-            />
-			<TaskList tasks={tasks} />
-            <TaskAdd/>
+    const [sidebarOpen, setSidebarOpen] = useState(true);
+
+    return (
+        <div className="container">
+
+            <Sidebar
+                open={sidebarOpen}
+                className="sidebar"
+            >
+                <div onClick={() => setSidebarOpen(!sidebarOpen)}>
+                    <FaBars />
+                </div>
+                <Menu iconShape="square">
+                    <MenuItem>Dashboard</MenuItem>
+                    <SubMenu title="Tasks">
+                        <MenuItem>Day</MenuItem>
+                        <MenuItem>Week</MenuItem>
+                        <MenuItem>Month</MenuItem>
+                        <MenuItem>All</MenuItem>
+                    </SubMenu>
+                    <SubMenu title="Tags">
+                        <MenuItem>Personal</MenuItem>
+                        <MenuItem>Work</MenuItem>
+                        <MenuItem>Family</MenuItem>
+                    </SubMenu>
+                </Menu>
+            </Sidebar>
+
+            <div>
+                <TasksGreet
+                    userName={userName}
+                    weekDay={weekDay}
+                    dateNumber={dateNumber}
+                    dateMonth={dateMonth}
+                />
+                <TaskList tasks={tasks} />
+                <TaskAdd />
             </div>
             <div className="calendar">
-            <Calendar/>
+                <Calendar />
             </div>
-            
 
-		</div>
-  	);
+
+        </div>
+    );
 }
 
 export default Dashboard;

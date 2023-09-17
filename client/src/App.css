@@ -497,6 +497,12 @@ section {
   color: grey;
 }
 
+.sidebar {
+  transition: all 0.3s ease;
+}
 
-
-
+.react-pro-sidebar .FaBars {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+}

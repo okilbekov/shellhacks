@@ -1,6 +1,6 @@
 import AddTagButton from "./AddTagButton";
 
-const Sidebar = () => {
+const Sidebar = ({ open }) => {
     return (
         <div className="sidebar">
             <p className="sidebar-name">
