@@ -5,10 +5,12 @@ const TaskList = ({ tasks }) => {
 
     return (
         <div>
-            {tasks.map(task => {
-                <TaskItem task={task} />,
-                <TaskItemOpen task={task} />
-            })}
+            {tasks.map(task => (
+                <>
+                    <TaskItem task={task} />
+                    <TaskItemOpen task={task} />
+                </>
+            ))}
         </div>
     )
 }

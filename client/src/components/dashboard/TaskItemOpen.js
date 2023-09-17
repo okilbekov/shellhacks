@@ -1,6 +1,9 @@
-const TaskItemOpen = ({ task }) => {
+const TaskItemOpen = ({ task, setOpen }) => {
     return (
-        <div className="task-inner">
+        <div
+            className="task-inner"
+            onClick={() => setOpen(false)}
+        >
             <div className="task-btn">
                 <input type="radio" />
             </div>
@@ -17,7 +20,7 @@ const TaskItemOpen = ({ task }) => {
                             Date:
                         </p>
                         <p className="task-date__deadline">
-                            {task.date }
+                            {task.date}
                         </p>
                     </div>
                     <div className="task-duration">
@@ -25,12 +28,12 @@ const TaskItemOpen = ({ task }) => {
                             Duration:
                         </p>
                         <p className="duration-time">
-                            {task.duration }
+                            {task.duration}
                         </p>
                     </div>
                     <div className="task-priority">
                         <p className="priority-text">
-                            Priority: 
+                            Priority:
                         </p>
                         <p className="priority-id">
                             {task.priority}

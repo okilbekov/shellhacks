@@ -1,21 +1,13 @@
+import { useState } from 'react'
+import TaskItemClosed from './TaskItemClosed'
+import TaskItemOpen from './TaskItemOpen'
+
 const TaskItem = ({ task }) => {
+    const [open, setOpen] = useState(false)
 
     return (
-        <div>
-             <div className="task-inner">
-            <div className="task-btn">
-                <input type="radio" />
-            </div>
-            <div className="task-info">
-                <p className="task-type">
-                    {/* {task.type} */} Personal
-                </p>
-                <p className="task-title">
-                    {task.title }
-                </p>
-            </div>
-        </div>
-        </div>
+        open ? <TaskItemOpen task={task} setOpen={setOpen} />
+            : <TaskItemClosed task={task} setOpen={setOpen} />
     )
 }
 

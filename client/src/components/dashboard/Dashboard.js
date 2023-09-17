@@ -4,6 +4,7 @@ import TaskAdd from "./TaskAdd";
 import Calendar from "./Calendar";
 import './dashboard.css'
 import TasksGreet from "./TaskGreet";
+
 const tasks = [
     {
         "title": "Finish the project proposal",
