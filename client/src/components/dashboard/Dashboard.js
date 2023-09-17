@@ -94,7 +94,7 @@ const Dashboard = () => {
         <div className="container">
 
             <Sidebar
-                open={sidebarOpen}
+                collapsed={sidebarOpen}
                 className="sidebar"
             >
                 <div onClick={() => setSidebarOpen(!sidebarOpen)}>
