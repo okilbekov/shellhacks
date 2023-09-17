@@ -87,8 +87,12 @@ const dateMonth = dateObj.toLocaleString('en-US', { month: 'long' });
 
 const Dashboard = () => {
 	return (
-		<div>
-			<Sidebar/>
+		<div className="container">
+			
+        <div>
+            <Sidebar/>
+        </div>
+           <div> 
             <TasksGreet 
             userName={userName} 
             weekDay={weekDay} 
@@ -97,7 +101,11 @@ const Dashboard = () => {
             />
 			<TaskList tasks={tasks} />
             <TaskAdd/>
+            </div>
+            <div className="calendar">
             <Calendar/>
+            </div>
+            
 
 		</div>
   	);

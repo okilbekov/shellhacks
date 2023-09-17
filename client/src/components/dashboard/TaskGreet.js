@@ -5,9 +5,7 @@ const TasksGreet = ({ userName, weekDay, dateNumber, dateMonth }) => {
           Hey {userName} !
         </h2>
   
-        <p className="sub-title">
-          WTF I just copy some weird shit
-        </p>
+     
   
         <div className="date-info">
           <p className="week-day">
