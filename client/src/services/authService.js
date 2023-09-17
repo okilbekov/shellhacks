@@ -7,6 +7,7 @@ const authService = {
   // Login user
   async login(credentials) {
     try {
+      console.log(credentials);
       const response = await instance.post('/api/login', credentials, {
         headers: {
           'Content-Type': 'application/json'
