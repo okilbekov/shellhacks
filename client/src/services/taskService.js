@@ -27,7 +27,11 @@ const taskService = {
   // Create a new task
   async createTask(taskData) {
     try {
-      const response = await api.post('/tasks', taskData);
+      const response = await api.post('/tasks', taskData, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       return response.data;
     } catch (error) {
       throw error;

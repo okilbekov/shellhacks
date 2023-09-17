@@ -3,8 +3,16 @@ const usersRouter = require('express').Router();
 const User = require('../models/user');
 
 usersRouter.get('/', async (request, response) => {
-	const users = await User.find({});
-	response.json(users);
+	const token = getTokenFrom(request)
+	const decodedToken = jwt.verify(token, config.JWT_SECRET)
+
+	if (!decodedToken.id) {
+		return response.status(401).json({ error: 'token invalid' })
+	}
+	
+	const user = await User.findById(decodedToken.id)
+
+	response.json(user);
 });
 
 usersRouter.post('/register', async (request, response) => {

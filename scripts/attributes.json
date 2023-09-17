@@ -1,0 +1,29 @@
+{
+  "deadline": {
+    "noDeadline": 0.5,
+    "dueToday": 4,
+    "in3Days": 3,
+    "thisWeek": 2,
+    "thisMonth": 1,
+    "weight": 1
+  },
+  "estimatedDuration": {
+    "shortTask": 1,
+    "mediumTask": 2,
+    "longTask": 3,
+    "weight": 2
+  },
+  "importanceTag": {
+    "High": 3,
+    "Medium": 2,
+    "Low": 1,
+    "weight": 3
+  },
+  "frequency": {
+    "Daily": 4,
+    "Weekly": 3,
+    "Monthly": 2,
+    "One-time": 1,
+    "weight": 1
+  }
+}

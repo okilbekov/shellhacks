@@ -3,6 +3,40 @@ const Task = require('../models/task');
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const config = require('../utils/config');
+const fs = require('fs');
+const moment = require('moment');
+
+const categorizeDeadline = (deadlineStr) => {
+	if (!deadlineStr) return "noDeadline";
+    const now = moment();
+    const deadline = moment(deadlineStr, "YYYY/MM/DD HH:mm");
+    const diffDays = deadline.diff(now, 'days');
+
+    if (diffDays <= 0) return "due today";
+    else if (diffDays <= 3) return "in 3 days";
+    else if (diffDays <= 7) return "this week";
+    return "this month";
+}
+
+const categorizeDuration = (durationMinutes) => {
+    if (durationMinutes <= 30) return "Short Task";
+    else if (durationMinutes <= 120) return "Medium Task";
+    return "Long Task";
+}
+
+const computeScore = (task, attributes) => {
+    let score = 0;
+
+	const deadline = categorizeDeadline(task.deadline);
+	const duration = categorizeDuration(task.duration);
+
+    score += attributes.deadline[deadline] * attributes.deadline.weight;
+    score += attributes.duration[duration] * attributes.estimatedDuration.weight;
+    score += attributes.importanceTag[task.importance] * attributes.importanceTag.weight;
+    score += attributes.frequency[task.frequency] * attributes.frequency.weight;
+
+    return score;
+}
 
 const getTokenFrom = request => {
 	const authorization = request.get('authorization')
@@ -11,11 +45,6 @@ const getTokenFrom = request => {
 	}
 	return null
 }
-
-const computeScore = (task) => {
-	const { deadline, duration, importance } = task;
-	return (deadline * duration) / importance;
-};
 
 tasksRouter.get('/', async (request, response) => {
 	const token = getTokenFrom(request)
@@ -35,19 +64,23 @@ tasksRouter.get('/', async (request, response) => {
 });
 
 tasksRouter.get('/sorted', async (request, response) => {
-	const userId = request.user.id;
+    const userId = request.user.id;
 
-	try {
-		const tasks = await Task.find({ user: userId });
+    try {
+        const tasks = await Task.find({ user: userId });
 
-		const sortedTasks = tasks.sort((a, b) => b.priorityScore - a.priorityScore);
+        // Load the attributes and weights from attributes.json
+        const attributes = JSON.parse(fs.readFileSync('attributes.json', 'utf8'));
 
-		response.json(sortedTasks);
+        // Sort the tasks based on the computed score
+        const sortedTasks = tasks.sort((a, b) => computeScore(b, attributes) - computeScore(a, attributes));
 
-	} catch (error) {
-		console.error(error);
-		response.status(500).json({ error: 'Failed to retrieve sorted tasks' });
-	}
+        response.json(sortedTasks);
+
+    } catch (error) {
+        console.error(error);
+        response.status(500).json({ error: 'Failed to retrieve sorted tasks' });
+    }
 });
 
 tasksRouter.get('/:id', async (request, response) => {
@@ -81,8 +114,6 @@ tasksRouter.post('/', async (request, response) => {
 	if (!decodedToken.id) {
 		return response.status(401).json({ error: 'token invalid' })
 	}
-
-
 
 	// Validate the required fields
 	if (!body.title || !body.deadline || !body.duration || !body.importance) {

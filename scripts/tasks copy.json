@@ -4,419 +4,719 @@
         "importance": "High",
         "deadline": "2023/09/19 16:00",
         "duration": 240,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Prepare for tomorrow's major client presentation",
         "importance": "High",
         "deadline": "2023/09/17 11:00",
         "duration": 180,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Review urgent contract for signature",
         "importance": "High",
         "deadline": "2023/09/17 14:00",
         "duration": 90,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Attend executive strategy meeting",
         "importance": "High",
         "deadline": "2023/09/17 15:30",
         "duration": 120,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Send follow-up email to high-value client",
         "importance": "High",
         "deadline": "2023/09/17 13:00",
         "duration": 15,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Complete quarterly review documentation",
         "importance": "High",
         "deadline": "2023/09/20 12:00",
         "duration": 150,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Coordinate emergency team response",
         "importance": "High",
         "deadline": "2023/09/17 12:30",
         "duration": 45,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Check and approve budget proposal",
         "importance": "High",
         "deadline": "2023/09/21 10:00",
         "duration": 120,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Confirm keynote speaker for annual conference",
         "importance": "High",
         "deadline": "2023/09/22 09:00",
         "duration": 60,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Revise project plan with new updates",
         "importance": "High",
         "deadline": "2023/09/23 15:00",
         "duration": 180,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
-    {
+	{
         "title": "Organize team brainstorming session for new campaign",
         "importance": "Medium",
         "deadline": "2023/09/18 10:00",
         "duration": 90,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Analyze current month sales data",
         "importance": "Medium",
         "deadline": "2023/09/24 11:00",
         "duration": 180,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Submit funding proposal before deadline",
         "importance": "High",
         "deadline": "2023/09/19 14:00",
         "duration": 120,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Address critical customer complaint",
         "importance": "High",
         "deadline": "2023/09/17 16:00",
         "duration": 45,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Finalize partnership agreement draft",
         "importance": "Medium",
         "deadline": "2023/09/25 09:00",
         "duration": 150,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Prepare materials for board meeting next week",
         "importance": "High",
         "deadline": "2023/09/23 12:00",
         "duration": 180,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Update crisis management protocol",
         "importance": "Medium",
         "deadline": "2023/09/27 15:00",
         "duration": 60,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Review and approve marketing collateral",
         "importance": "Medium",
         "deadline": "2023/09/28 14:00",
         "duration": 45,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Coordinate with PR team on recent press release",
         "importance": "Medium",
         "deadline": "2023/09/26 10:30",
         "duration": 30,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Conduct interview with potential senior manager",
         "importance": "High",
         "deadline": "2023/09/29 11:00",
         "duration": 60,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
-    {
+	{
         "title": "Schedule quarterly team building event",
         "importance": "Medium",
         "deadline": "2023/09/30 09:00",
         "duration": 30,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Update training materials for new hires",
         "importance": "Medium",
         "deadline": "2023/10/01 14:00",
         "duration": 120,
-        "frequency": "One-time"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Meet with suppliers for renegotiation",
         "importance": "Medium",
         "deadline": "2023/09/30 15:00",
         "duration": 90,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Audit monthly expenses and budget variances",
         "importance": "Low",
         "deadline": "2023/10/04 10:00",
         "duration": 180,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Prepare feedback report for junior staff performance",
         "importance": "Medium",
         "deadline": "2023/10/03 12:00",
         "duration": 60,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Update company website with recent accolades",
         "importance": "Low",
         "deadline": "2023/10/05 09:00",
         "duration": 120,
-        "frequency": "One-time"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Attend industry webinar on emerging technologies",
         "importance": "Low",
         "deadline": "2023/09/30 10:30",
         "duration": 90,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Finalize venue for company's year-end gala",
         "importance": "Medium",
         "deadline": "2023/10/02 16:00",
         "duration": 45,
-        "frequency": "One-time"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Evaluate software tools for HR department upgrade",
         "importance": "Low",
         "deadline": "2023/10/06 11:00",
         "duration": 60,
-        "frequency": "One-time"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Draft press statement for upcoming product launch",
         "importance": "Medium",
         "deadline": "2023/10/03 13:00",
         "duration": 90,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
-    {
+	{
         "title": "Review and renew office lease agreement",
         "importance": "Low",
         "deadline": "2023/10/10 10:00",
         "duration": 60,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Draft monthly newsletter for subscribers",
         "importance": "Low",
         "deadline": "2023/10/08 14:00",
         "duration": 90,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Check inventory levels for key products",
         "importance": "Low",
         "deadline": "2023/10/07 11:00",
         "duration": 45,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Plan and schedule team recreational activity",
         "importance": "Low",
         "deadline": "2023/10/12 15:00",
         "duration": 30,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Review monthly utilities and negotiate better rates",
         "importance": "Low",
         "deadline": "2023/10/14 16:00",
         "duration": 60,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Revise company's sustainability and green initiatives",
         "importance": "Low",
         "deadline": "2023/10/15 10:30",
         "duration": 120,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Update digital assets in the cloud storage",
         "importance": "Low",
         "deadline": "2023/10/16 14:00",
         "duration": 90,
-        "frequency": "One-time"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Design promotional materials for the upcoming sales event",
         "importance": "Low",
         "deadline": "2023/10/09 09:00",
         "duration": 180,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Participate in a networking event in the city",
         "importance": "Low",
         "deadline": "2023/10/13 13:00",
         "duration": 240,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Host a webinar on industry trends and insights",
         "importance": "Low",
         "deadline": "2023/10/18 15:30",
         "duration": 180,
-        "frequency": "One-time"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
-    {
+	{
         "title": "Arrange a client feedback session",
         "importance": "Low",
         "deadline": "2023/10/20 10:30",
         "duration": 90,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Setup new CRM software training for sales team",
         "importance": "Low",
         "deadline": "2023/10/23 14:30",
         "duration": 120,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Review quarterly social media engagement metrics",
         "importance": "Low",
         "deadline": "2023/10/25 16:00",
         "duration": 60,
-        "frequency": "One-time"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Renew software licenses for the development team",
         "importance": "Low",
         "deadline": "2023/10/22 11:00",
         "duration": 30,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Conduct a market survey for upcoming product line",
         "importance": "Low",
         "deadline": "2023/10/27 10:00",
         "duration": 180,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Review office security measures and protocols",
         "importance": "Low",
         "deadline": "2023/10/29 15:30",
         "duration": 90,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Reevaluate vendor contracts and look for cost-saving opportunities",
         "importance": "Low",
         "deadline": "2023/11/02 14:00",
         "duration": 120,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Conduct team brainstorming session for new ad campaign",
         "importance": "Low",
         "deadline": "2023/10/30 11:00",
         "duration": 150,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Schedule maintenance for office HVAC system",
         "importance": "Low",
         "deadline": "2023/10/26 09:30",
         "duration": 45,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Organize a feedback collection drive from customers",
         "importance": "Low",
         "deadline": "2023/11/01 16:30",
         "duration": 180,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
-    {
+	{
         "title": "Reorganize office layout for better space optimization",
         "importance": "Low",
         "deadline": "2023/11/05 14:30",
         "duration": 240,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Host a company town hall meeting",
         "importance": "Low",
         "deadline": "2023/11/09 15:30",
         "duration": 180,
-        "frequency": "One-time"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Prepare annual budget report for next fiscal year",
         "importance": "Low",
         "deadline": "2023/11/12 11:00",
         "duration": 120,
-        "frequency": "Monthly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Plan holiday party for employees",
         "importance": "Low",
         "deadline": "2023/11/07 16:00",
         "duration": 60,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Evaluate quarterly sales figures and compare with targets",
         "importance": "Low",
         "deadline": "2023/11/15 15:00",
         "duration": 90,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Attend an industry seminar on new technologies",
         "importance": "Low",
         "deadline": "2023/11/18 10:30",
         "duration": 240,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Conduct a training session on workplace ethics",
         "importance": "Low",
         "deadline": "2023/11/21 14:00",
         "duration": 150,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Review and update employee benefits and compensation",
         "importance": "Low",
         "deadline": "2023/11/24 10:00",
         "duration": 90,
-        "frequency": "Daily"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Plan corporate social responsibility activities for next quarter",
         "importance": "Low",
         "deadline": "2023/11/27 16:00",
         "duration": 120,
-        "frequency": "Weekly"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     },
     {
         "title": "Coordinate team-building exercises for the development department",
         "importance": "Low",
         "deadline": "2023/11/30 15:00",
         "duration": 180,
-        "frequency": "One-time"
+        "frequency": {
+            "once": true,
+            "daily": false,
+            "weekly": [],
+            "monthly": []
+        }
     }
 ]
