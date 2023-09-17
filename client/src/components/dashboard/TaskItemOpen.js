@@ -8,14 +8,13 @@ const TaskItemOpen = ({ task, setOpen }) => {
     const handleRadioChange = (e) => {
         e.stopPropagation();
         setIsSelected(!isSelected);
-        // set task completed to true, and update task(updatedTask)
         const updatedTask = { ...task, completed: true };
         updateTask(task.id, updatedTask);
         
     };
 
     const handleDivClick = () => {
-        setOpen(false);
+        setOpen(true);
     };
 
     return (
