@@ -6,10 +6,12 @@ const TaskList = ({ tasks }) => {
     return (
         <div>
             {tasks.map(task => (
-                <>
+                <div
+                    key = { task.id }
+                >
                     <TaskItem task={task} />
                     <TaskItemOpen task={task} />
-                </>
+                </div>
             ))}
         </div>
     )
