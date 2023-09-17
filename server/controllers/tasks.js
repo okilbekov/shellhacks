@@ -32,7 +32,7 @@ const computeScore = (task, attributes) => {
 
     score += attributes.deadline[deadline] * attributes.deadline.weight;
     score += attributes.duration[duration] * attributes.estimatedDuration.weight;
-    score += attributes.importanceTag[task.importance] * attributes.importanceTag.weight;
+    score += task.importance * attributes.importanceTag.weight;
     score += attributes.frequency[task.frequency] * attributes.frequency.weight;
 
     return score;
