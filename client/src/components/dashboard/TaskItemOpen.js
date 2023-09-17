@@ -1,11 +1,31 @@
+import React, { useState } from 'react';
+
+
 const TaskItemOpen = ({ task, setOpen }) => {
+    const [isSelected, setIsSelected] = useState(false);
+
+    const handleRadioChange = (e) => {
+        // Stop event from bubbling up to parent div
+        e.stopPropagation();
+        setIsSelected(!isSelected);
+    };
+
+    const handleDivClick = () => {
+        setOpen(false);
+    };
+
     return (
-        <div
-            className="task-inner"
-            onClick={() => setOpen(false)}
+        <div 
+            className={`task-inner ${isSelected ? 'selected-task' : ''}`}
+            onClick={handleDivClick}
         >
             <div className="task-btn">
-                <input type="radio" />
+                <input 
+                    type="radio"
+                    checked={isSelected}
+                    onClick={(e) => e.stopPropagation()} // Stop event from bubbling up
+                    onChange={handleRadioChange}
+                />
             </div>
             <div className="task-info">
                 <p className="task-type">
@@ -43,6 +63,6 @@ const TaskItemOpen = ({ task, setOpen }) => {
             </div>
         </div>
     );
-}
+};
 
 export default TaskItemOpen;

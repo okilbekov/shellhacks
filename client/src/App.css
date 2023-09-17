@@ -144,6 +144,16 @@ section {
  
 
 }
+.task-inner {
+  background-color: white;
+}
+
+.selected-task {
+  background-color: rgb(124, 223, 124);
+  
+}
+
+
 
 
 .title{
