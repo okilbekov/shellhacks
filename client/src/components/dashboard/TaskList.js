@@ -1,17 +1,14 @@
 import TaskItem from "./TaskItem"
 import TaskItemOpen from "./TaskItemOpen"
+import useTasks from "../../hooks/useTasks"
 
-const TaskList = ({ tasks }) => {
+const TaskList = () => {
+    const { tasks } = useTasks()
 
     return (
         <div>
             {tasks.map(task => (
-                <div
-                    key = { task.id }
-                >
-                    <TaskItem task={task} />
-                    <TaskItemOpen task={task} />
-                </div>
+                <TaskItem key={task.id} task={task} />
             ))}
         </div>
     )

@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-
+import useTasks from "../../hooks/useTasks";
 
 const TaskItemOpen = ({ task, setOpen }) => {
     const [isSelected, setIsSelected] = useState(false);
+    const { updateTask, deleteTask } = useTasks();
 
     const handleRadioChange = (e) => {
-        // Stop event from bubbling up to parent div
         e.stopPropagation();
         setIsSelected(!isSelected);
+        // set task completed to true, and update task(updatedTask)
+        const updatedTask = { ...task, completed: true };
+        updateTask(task.id, updatedTask);
+        
     };
 
     const handleDivClick = () => {
@@ -23,7 +27,7 @@ const TaskItemOpen = ({ task, setOpen }) => {
                 <input 
                     type="radio"
                     checked={isSelected}
-                    onClick={(e) => e.stopPropagation()} // Stop event from bubbling up
+                    onClick={(e) => e.stopPropagation()}
                     onChange={handleRadioChange}
                 />
             </div>
