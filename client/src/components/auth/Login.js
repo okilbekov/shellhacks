@@ -1,5 +1,6 @@
 import useAuth from "../../hooks/useAuth";
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const { login } = useAuth();
@@ -8,13 +9,15 @@ const Login = () => {
     password: "",
   });
 
+  const navigate = useNavigate();
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const response = await login(credentials);
       if (response && response.token) {
         console.log("Logged in successfully!", response);
-        // Redirect user to dashboard or home page
+        navigate("/dashboard");
       } else {
         console.error("Login was unsuccessful.");
       }

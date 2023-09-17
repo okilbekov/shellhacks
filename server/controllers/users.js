@@ -1,6 +1,8 @@
 const bcrypt = require('bcryptjs');
 const usersRouter = require('express').Router();
 const User = require('../models/user');
+const jwt = require('jsonwebtoken');
+const config = require('../utils/config');
 
 usersRouter.get('/', async (request, response) => {
 	const token = getTokenFrom(request)
@@ -15,12 +17,14 @@ usersRouter.get('/', async (request, response) => {
 	response.json(user);
 });
 
-usersRouter.post('/register', async (request, response) => {
-	const { username, email, password } = request.body;
+usersRouter.post('/signup', async (request, response) => {
+	const { email, password, username } = request.body;
 
 	if (!password || password.length < 8) {
 		return response.status(400).json({ error: 'Password should be at least 8 characters long.' });
 	}
+
+
 
 	const saltRounds = 10;
 	const passwordHash = await bcrypt.hash(password, saltRounds);
@@ -33,7 +37,15 @@ usersRouter.post('/register', async (request, response) => {
 
 	try {
 		const savedUser = await user.save();
-		response.json(savedUser);
+
+		const userForToken = {
+            id: savedUser.id,
+            username: savedUser.username
+        };
+
+        const token = jwt.sign(userForToken, config.JWT_SECRET, { expiresIn: '1h' });
+
+        response.json({ token, username: user.username, id: user._id });
 	} catch (error) {
 		response.status(400).json({ error: error.message });
 	}

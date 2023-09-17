@@ -1,14 +1,17 @@
 import useAuth from "../../hooks/useAuth";
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
-  const { signUp } = useAuth(); // Replace with the actual signUp function from your useAuth hook
+  const { signup } = useAuth();
   const [credentials, setCredentials] = useState({
     username: "",
     email: "",
     password: "",
     confirmPassword: ""
   });
+
+  const navigate = useNavigate();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -18,10 +21,13 @@ const SignUp = () => {
     }
 
     try {
-      const response = await signUp(credentials);
+      // dont send confirmPassword to the server
+      const { confirmPassword, ...rest } = credentials;
+      const response = await signup(rest);
+
       if (response && response.token) {
         console.log("Signed up successfully!", response);
-        // Redirect user to dashboard or home page
+        navigate("/dashboard");
       } else {
         console.error("Sign-up was unsuccessful.");
       }

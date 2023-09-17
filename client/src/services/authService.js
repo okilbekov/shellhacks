@@ -26,7 +26,7 @@ const authService = {
   // Register new user
   async signup(data) {
     try {
-      const response = await instance.post('/api/users/register', data);
+      const response = await instance.post('/api/users/signup', data);
       if (response.data && response.data.token) {
         localStorage.setItem('token', response.data.token);
       }
