@@ -6,9 +6,9 @@ const PrivateRoute = () => {
   const { isAuthenticated } = useAuth();
   const location = useLocation();
 
-  if(!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: location }} />
-  }
+  // if(!isAuthenticated) {
+  //   return <Navigate to="/login" state={{ from: location }} />
+  // }
 
   return <Outlet />;
 }
