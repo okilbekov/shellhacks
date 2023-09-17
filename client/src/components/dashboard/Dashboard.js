@@ -2,7 +2,6 @@ import TaskList from "./TaskList";
 import Sidebar from "./Sidebar";
 import TaskAdd from "./TaskAdd";
 import Calendar from "./Calendar";
-import './dashboard.css'
 import TasksGreet from "./TaskGreet";
 
 const tasks = [
